@@ -1,0 +1,12 @@
+@model Genre
+@{
+    ViewData["Title"] = "Xóa thể loại";
+}
+<h1>Xóa thể loại</h1>
+<div class="alert alert-warning">Bạn có chắc chắn muốn xóa thể loại này không?</div>
+<dl class="row"><dt class="col-sm-3">Tên thể loại</dt><dd class="col-sm-9">@Model.Name</dd></dl>
+<form asp-action="Delete" method="post">
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-danger">Xác nhận xóa</button>
+    <a asp-action="Index" class="btn btn-secondary">Quay lại</a>
+</form>
